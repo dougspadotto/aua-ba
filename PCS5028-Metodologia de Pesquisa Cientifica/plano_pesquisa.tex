@@ -1,0 +1,223 @@
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	french,				% idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---
+% PACOTES
+% ---
+
+% ---
+% Pacotes fundamentais 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+% ---
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 
+% Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+\titulo{Organização de uma cadeia logística  de verduras e legumes orgânicos na cidade de São Paulo utilizando IoT}
+\autor{Douglas Spadotto}
+\local{São Paulo}
+\data{2018}
+\instituicao{%
+  Universidade de São Paulo
+  \par
+  Escola Politécnica da Universidade de São Paulo
+  \par
+  Programa de Pós-Gradução em Engenharia de Sistemas Logísticos}
+\tipotrabalho{Projeto de pesquisa}
+\preambulo{Projeto de pesquisa elaborado durante a disciplina de Metodologia de Pesquisa Científica em Engenharia de Computação.}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{projeto de pesquisa}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+\begin{document}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+\imprimircapa
+\imprimirfolhaderosto
+
+\chapter*{Resumo}
+A demanda por produtos orgânicos cresce mundialmente porém no Brasil o crescimento é inferior ao restante do mundo devido a custos elevados, muitos deles de natureza logística. A estruturação de uma cadeia logística de produtos agrícolas utilizando um modelo pode trazer eficiências, bem como o uso de tecnologias de sensores e os dados que produzem. 
+Este trabalho visa escolher e aplicar um modelo da literatura a uma cadeia logística de orgânicos existente e identificar lacunas e oportunidades de melhoria. Também objetiva-se o uso de sensores de IoT para a medição da cadeia.
+
+\textbf{Palavras-chave}: cadeia de suprimentos,produtos agrícolas orgânicos, IoT
+
+\chapter*{Abstract}
+The demand for organic products is growing globally, however in Brazil the growth is slower to the rest of the world due to high costs, many of them of due to logistics. Structuring a supply chain of agricultural products using a model can bring efficiencies, as well as the use of sensor technologies and the data they produce.
+This paper aims to choose and apply an appropriate model from the literature to an existing organic supply chain and identify gaps and opportunities for improvement. The objective is also to use IoT sensors to measure the chain wherever applicable.
+
+\textbf{Keywords}: supply chain, organic produce, IoT
+
+\chapter{Introdução e justificativa}
+
+Há bastante tempo demonstrou-se que produtos orgânicos possuem características próprias de cultivo, colheita, armazenamento, transporte, distribuição e consumo, e que trazem benefícios tanto para o produtor rural \citeonline{Campanhola2001} quanto para os consumidores \citeonline{Tsolakis2014}.
+
+O crescimento do consumo de produtos orgânicos no Brasil é inferior média mundial devido a problemas de origem logística, como custos elevados e difícil acesso aos produtos \citeonline{ORGANIS2017}. 
+
+A imposição de uma estrutura na organização de uma cadeia logística de alimentos de origem agrícola tem o objetivo de torná-la competitiva e sustentável. Uma forma de estruturação é discutida em \citeonline{Tsolakis2014}, onde apresentam uma estrutura hierarquica tanto dos atores da cadeia de suprimentos quanto um arcabouço para tomada de decisão que guiam a organização da mesma.
+
+A dissertação de \citeonline{Silva2010} discute uma estrutura para a cadeia do frio, que possui características que se sobrepõe à cadeia de orgânicos, devido a perecibilidade dos produtos. \citeonline{COSTA2006} analisa estratégias de gestão para a manga produzida no Brasil para exportação e também relaciona estas estratégias a estruturas de cadeias logísticas da literatura.
+
+A instrumentação de uma cadeia logística pode ser utilizada para atingir níveis de serviço mais elevados, porém a medida de quanto uma cadeia logística, ou até mesmo produtos dentro de uma mesma cadeia, devem ser instrumentados difere de acordo com o seu retorno sobre o investimento e viabilidade \citeonline{Dabbene2014}.
+
+\chapter{Objetivos}
+
+Mapearemos uma cadeia logística de frutas, verduras e legumes orgânicos da cidade de São Paulo de acordo com uma estrutura da literatura a ser selecionada, sendo que a de \citeonline{Tsolakis2014} oferece um arcabouço genérico inicial para produtos agrícolas que será utilizada.
+
+Identificaremos as partes desta cadeia, seus papéis e responsabilidades e as formas como decisões são tomadas por parte dos produtores, organizadores e consumidores.
+
+Discutiremos opções de intrumentação desta rede com sensores para coleta de dados precisos de localização, tempo e características que afetam a qualidade dos produtos (temperatura, umidade) e como estes dados se relacionam com sistemas de rastreamento em uso, em formato de códigos de barras e QR (Quick Response), de acordo com padrões ISO/International Electro-technical Commission (IEC) 15961, 15962, 24791, 15459, 15418 e 15434.
+
+Relacionaremos a aplicação destes sensores com o atendimento do padrão ISO para cadeias de suprimentos de alimentos, o ISO 22005:2007 \citeonline{international2007traceability}.
+
+
+\chapter{Plano de trabalho}
+
+Este projeto tem duração prevista de 20 meses, divididos em 5 quadrimestres, distribuídos da seguinte forma:
+
+\begin{itemize}
+\item Quadrimestre 1: de Setembro/2018 a Dezembro/2018.
+\item Quadrimestre 2: de Janeiro/2019 a Abril/2019.
+\item Quadrimestre 3: de Maio/2019 a Agosto/2019.
+\item Quadrimestre 4: de Setembro/2019 a Dezembro/2019.
+\item Quadrimestre 5: de Janeiro/2020 a Abril/2020.
+\end{itemize}
+Dentro deste prazo, realizaremos as seguintes atividades:
+
+\begin{enumerate}
+\item Comparativo de modelos de cadeia logística para produtos agrícolas in natura;
+
+\item Listagem de componentes de IoT aplicáveis a esta cadeia logística: classes e modelos de equipamentos,  protocolos de comunicação e análise de viabilidade para aplicação no estudo;
+
+\item Qualificação do plano de trabalho;
+
+\item Contato com cadeia logística para coleta de dados: 
+\begin{enumerate}
+	\item Realização de reuniões de coleta de dados com organizadores;
+	\item Visitas a campo: coleta de dados sobre plantio, colheita, estoque e entregas a coletivos;
+	\item Visitas a coletivos de consumo: coleta de dados sobre recebimento, armazenamento temporário e entrega final;
+	\item Entrevistas ou questionários com consumidores finais.
+\end{enumerate}
+
+\item Elaboração de questionários e planos de visitas a campo;
+
+\item Análise dos dados coletados;
+
+\item Escrita de dissertação;
+
+\item Defesa de dissertação.
+\end{enumerate}
+
+\section{Cronograma de execução}
+
+A tabela \ref{tabela:1} estrutura as atividades como linhas e os quadrimestres como colunas.
+
+\begin{table}[h!]
+\begin{center}
+ \begin{tabular}{|| c || c | c | c | c | c | c ||} 
+ \hline
+ Atividade  & 1 & 2 & 3 & 4 & 5 \\ [0.5ex] 
+ \hline\hline
+ 1 & X & & & &  \\ 
+ \hline
+ 2 & X & & & &  \\
+ \hline
+ 3 & & X &  & & \\
+ \hline
+ 4 & & X & X & & \\
+ \hline
+ 5 & & X & X & & \\ 
+ \hline
+ 6 & & & X & & \\ 
+ \hline
+ 7 & & & & X & X \\
+ \hline
+ 8 & & & & & X \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\caption{Cronograma de execução}
+\label{tabela:1}
+\end{table}
+
+\chapter{Material e métodos}
+
+Coletaremos dados da cadeia logística: de produtores rurais, organizadores, pontos de coleta e consumidores. A cadeia logística colaborativa a ser analisada será a Banca Orgânica, do Instituto Auá. A Banca Orgânica une coletivos de consumo com produtores de produtos agrícolas orgânicos e agroecológicos.
+
+Esta rede é formada por coletivos de consumo se auto-organizam ao redor de pontos de coleta. Existe um orgão centralizador dos pedidos, que faz a conexão entre produtores e centros de coleta destes coletivos.
+
+Assumindo o acesso irrestrito à rede, aplicaremos questionários a consumidores finais, e documentaremos a produção, organização e distribuição através de visitas técnicas a cada ponto da cadeia de distribuição. Estas visitas seguirão um roteiro a ser elaborado previamente. No caso de falta de dados em uma visita devido a falhas no roteiro, este poderá ser reformulado e faremos novas visitas utilizando o roteiro corrigido.
+
+Na impossibilidade de acesso a esta rede, existem outras cadeias que podem ser estudadas. \citeonline{Terrazzan2009} fez estudo similar utilizando redes de supermercados. Sem acesso poderemos coletar alguns pontos de dados relevantes utilizando dados de divulgação que coletaremos na imprensa.
+
+\chapter{Forma de análise dos resultados}
+
+Agruparemos os resultados da coleta de dados em dimensões de demografia, localização, características de produção, distribuição e consumo.
+
+Faremos comparações de dados de produtores e consumidores para identificação de incompatibilidades entre oferta e demanda.
+
+Indicaremos oportunidades de otimização da cadeia logística, visando reduzir custos e tornar os produtos e meio de entrega mais atrativos para atender a futuras demandas: minimizar o tempo entre colheita e consumo, eliminar intervenções e processos manuais para integração da cadeia logística entre produtor e consumidor.
+
+Do ponto de vista de melhoria do nível de serviço, buscaremos indicar formas de ajustar roteiros e entregas que atendam as necessidades dos consumidores.
+
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{projeto}
+
+\end{document}

@@ -1,0 +1,93 @@
+
+
+Resumo
+------
+
+
+
+Abstract
+--------
+
+
+Introdução e justificativa
+----
+
+Há bastante tempo demonstrou-se que produtos orgânicos possuem características próprias de cultivo, colheita, armazenamento, transporte, distribuição e consumo, e que trazem benefícios tanto para o produtor rural (CAMPANHOLA/VALLARINI, 2001) quanto para os consumidores (TSOLAKIS et. al, 2013).
+
+O crescimento do consumo de produtos orgânicos no Brasil é inferior média mundial devido a problemas de origem logística, como custos elevados e difícil acesso aos produtos (ORGANIS, 2017). 
+
+A imposição de uma estrutura na organização de uma cadeia logística de alimentos de origem agrícola tem o objetivo de torná-la competitiva e sustentável. Uma forma de estruturação é discutida em (TSOLAKIS et. al, 2013), onde apresentam uma estrutura hierarquica tanto dos atores da cadeia de suprimentos quanto um arcabouço para tomada de decisão que guiam a organização da mesma.
+
+A dissertação de DA SILVA (2010) discute uma estrutura para a cadeia do frio, que possui características que se sobrepõe à cadeia de orgânicos, devido a perecibilidade dos produtos. COSTA (2006) analisa estratégias de gestão para a manga produzida no Brasil para exportação e também relaciona estas estratégias a estruturas de cadeias logísticas da literatura.
+
+A instrumentação de uma cadeia logística pode ser utilizada para atingir níveis de serviço mais elevados, porém a medida de quanto uma cadeia logística, ou até mesmo produtos dentro de uma mesma cadeia, devem ser instrumentados difere de acordo com o seu retorno sobre o investimento e viabilidade (DABBENE et. al, 2013).
+
+
+
+Objetivos
+----
+
+Mapearemos uma cadeia logística de frutas, verduras e legumes orgânicos da cidade de São Paulo de acordo com uma estrutura da literatura a ser selecionada, sendo que a de (TSOLAKIS et. al, 2013) oferece um arcabouço genérico inicial para produtos agrícolas que será utilizada.
+
+Identificaremos as partes desta cadeia, seus papéis e responsabilidades e as formas como decisões são tomadas por parte dos produtores, organizadores e consumidores.
+
+Discutiremos opções de intrumentação desta rede com sensores para coleta de dados precisos de localização, tempo e características que afetam a qualidade dos produtos (temperatura, umidade) e como estes dados se relacionam com sistemas de rastreamento em uso, em formato de códigos de barras e QR (Quick Response), de acordo com padrões ISO/International Electro-technical Commission (IEC) 15961, 15962, 24791, 15459, 15418 e 15434.
+
+Relacionaremos a aplicação destes sensores com o atendimento do padrão ISO para cadeias de suprimentos de alimentos, o ISO 22005:2007 (INTERNATIONAL ORGANIZATION FOR STANDARDIZATION, 2007).
+
+
+Plano de trabalho e cronograma execução
+-----
+
+Este projeto tem duração prevista de 20 meses. Dentro deste prazo, realizaremos as seguintes atividades:
+
+1. Comparativo de modelos de cadeia logística para produtos agrícolas in natura;
+
+2.  Listagem de componentes de IoT aplicáveis a esta cadeia logística: classes e modelos de equipamentos,  protocolos de comunicação e análise de viabilidade para aplicação no estudo;
+
+3. Qualificação do plano de trabalho;
+
+4. Contato com cadeia logística para coleta de dados: 
+	- Realização de reuniões de coleta de dados com organizadores;
+	- Visitas a campo: coleta de dados sobre produção, estoque e entregas a coletivos;
+	- Visitas a coletivos de consumo: coleta de dados sobre recebimento, armazenamento temporário e entrega final;
+	- Entrevistas ou questionários com consumidores finais.
+
+5. Elaboração de questionários e planos de visitas a campo;
+
+6. Análise dos dados coletados;
+
+7. Escrita de dissertação divulgando resultados;
+
+8. Defesa de dissertação.
+
+Cronograma de execução
+
+Quadrimestre 1 (Setembro/2018 - Dezembro/2018): 1, 2
+Quadrimestre 2 (Janeiro/2019 - Abril/2019): 3, 4, 5
+Quadrimestre 3 (Maio/2019 - Agosto/2019): 4, 5
+Quadrimestre 4 (Setembro/2019 - Dezembro/2019): 6, 7
+Quadrimestre 5 (Jan/2020 - Abril/2020): 7, 8
+
+
+Material e métodos
+-----
+
+Coletaremos dados da cadeia logística: de produtores rurais, organizadores, pontos de coleta e consumidores. A cadeia logística colaborativa a ser analisada será a "Banca Orgânica", do Instituto Auá. A Banca Orgânica é "uma Tecnologia Social do Instituto Auá que une coletivos de consumo e acesso a alimentos frescos e sem veneno, fortalecendo a agricultura orgânica e agroecológica" (INSTITUTO AUA, 2018).
+
+Esta rede é formada por coletivos de consumo se auto-organizam ao redor de pontos de coleta. Existe um orgão centralizador dos pedidos, que faz a conexão entre produtores e centros de coleta destes coletivos.
+
+Assumindo o acesso irrestrito à rede, aplicaremos questionários a consumidores finais, e documentaremos a produção, organização e distribuição através de visitas técnicas a cada ponto da cadeia de distribuição. Estas visitas seguirão um roteiro a ser elaborado previamente. No caso de falta de dados em uma visita devido a falhas no roteiro, este poderá ser reformulado e faremos novas visitas utilizando o roteiro corrigido.
+
+Na impossibilidade de acesso a esta rede, existem outras cadeias que podem ser estudadas; TERRAZAN (2009) fez estudo similar utilizando redes de supermercados. Sem acesso poderemos coletar alguns pontos de dados relevantes utilizando dados de divulgação que coletaremos na imprensa.
+
+Forma de análise dos resultados
+-----
+
+Agruparemos os resultados da coleta de dados em dimensões de demografia, localização, características de produção, distribuição e consumo.
+
+Faremos comparações de dados de produtores e consumidores para identificação de incompatibilidades entre oferta e demanda.
+
+Levantaremos oportunidades de otimização da cadeia logística, visando reduzir custos e tornar os produtos e meio de entrega mais atrativos para atender a futuras demandas: minimizar o tempo entre colheita e consumo, eliminar intervenções e processos manuais para integração da cadeia logística entre produtor e consumidor.
+
+Do ponto de vista de melhoria do nível de serviço, buscaremos indicar formas de ajustar roteiros e entregas que atendam as necessidades dos consumidores.
