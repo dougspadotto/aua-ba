@@ -38,7 +38,7 @@
 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
-\titulo{Organização de uma cadeia logística  de verduras e legumes orgânicos na cidade de São Paulo utilizando IoT}
+\titulo{Organização e instrumentação de uma cadeia logística  de verduras e legumes orgânicos na cidade de São Paulo}
 \autor{Douglas Spadotto}
 \local{São Paulo}
 \data{2018}
@@ -104,25 +104,31 @@ This paper aims to choose and apply an appropriate model from the literature to 
 
 \chapter{Introdução e justificativa}
 
-Há bastante tempo demonstrou-se que produtos orgânicos possuem características próprias de cultivo, colheita, armazenamento, transporte, distribuição e consumo, e que trazem benefícios tanto para o produtor rural \citeonline{Campanhola2001} quanto para os consumidores \citeonline{Tsolakis2014}.
+Nas últimas décadas, segundo \citeonline{Campanhola2001}, demonstrou-se que produtos orgânicos possuem características próprias de cultivo, colheita, armazenamento e  transporte. Além disso, o cultivo destes produtos traz benefícios para o produtor. Entre eles, menores gastos com insumos e melhor retorno financeiro na comercialização. 
 
-O crescimento do consumo de produtos orgânicos no Brasil é inferior média mundial devido a problemas de origem logística, como custos elevados e difícil acesso aos produtos \citeonline{ORGANIS2017}. 
+O interesse na compra desta produção é crescente da parte dos consumidores, conforme \citeonline{Tsolakis2014}. O autor indica como principal motivação ao consumo de produtos orgânicos a percepção de que estes são mais saudáveis, saborosos e seguros.
 
-A imposição de uma estrutura na organização de uma cadeia logística de alimentos de origem agrícola tem o objetivo de torná-la competitiva e sustentável. Uma forma de estruturação é discutida em \citeonline{Tsolakis2014}, onde apresentam uma estrutura hierarquica tanto dos atores da cadeia de suprimentos quanto um arcabouço para tomada de decisão que guiam a organização da mesma.
+Contudo, o crescimento do consumo de produtos orgânicos no Brasil é inferior à média mundial, devido a problemas de logísticos, como custos elevados de transporte, de conservação e difícil acesso aos produtos, de acordo com o relatório publicado pelo Conselho Brasileiro da Produção Orgânica e Sustentável (\citeonline{ORGANIS2017}). 
 
-A dissertação de \citeonline{Silva2010} discute uma estrutura para a cadeia do frio, que possui características que se sobrepõe à cadeia de orgânicos, devido a perecibilidade dos produtos. \citeonline{COSTA2006} analisa estratégias de gestão para a manga produzida no Brasil para exportação e também relaciona estas estratégias a estruturas de cadeias logísticas da literatura.
+A imposição de uma estrutura na organização de uma cadeia logística de alimentos de origem agrícola tem o objetivo de torná-la competitiva e sustentável. Uma forma de estruturação é discutida em \citeonline{Tsolakis2014}, que apresenta uma estrutura hierárquica tanto dos atores da cadeia de suprimentos quanto um arcabouço para tomada de decisão do seu gerenciamento.
 
-A instrumentação de uma cadeia logística pode ser utilizada para atingir níveis de serviço mais elevados, porém a medida de quanto uma cadeia logística, ou até mesmo produtos dentro de uma mesma cadeia, devem ser instrumentados difere de acordo com o seu retorno sobre o investimento e viabilidade \citeonline{Dabbene2014}.
+A dissertação de \citeonline{Silva2010} também discute uma estrutura de sistema logístico, neste caso para a cadeia fria, que possui características que se interssecciona com a cadeia de orgânicos, devido a perecibilidade dos produtos. 
+
+Outro trabalho relacionado a este tema é o de \citeonline{COSTA2006}, que analisa estratégias de gestão para a manga produzida no Brasil para exportação. O autor também relaciona estas estratégias a estruturas de cadeias logísticas da literatura.
+
+A instrumentação de uma cadeia logística pode ser utilizada para atingir níveis de serviço mais elevados, porém a medida de quanto uma cadeia logística, ou até mesmo diferentes produtos dentro de uma mesma cadeia, deve ser instrumentada difere de acordo com o retorno sobre o investimento e viabilidade, como explica \citeonline{Dabbene2014}.
+
+Tendo em vista este cenário e os trabalhos já publicados, o desenvolvimento da pesquisa apresentada neste projeto se justifica sobretudo pela necessidade de estudos que contribuam para a mitigação dos custos elevados e das ineficiências da cadeia logística de produtos orgânicos.
 
 \chapter{Objetivos}
 
-Mapearemos uma cadeia logística de frutas, verduras e legumes orgânicos da cidade de São Paulo de acordo com uma estrutura da literatura a ser selecionada, sendo que a de \citeonline{Tsolakis2014} oferece um arcabouço genérico inicial para produtos agrícolas que será utilizada.
+Esta pesquisa tem como objetivo geral mapear uma cadeia logística de frutas, verduras e legumes orgânicos existente na cidade de São Paulo.
 
-Identificaremos as partes desta cadeia, seus papéis e responsabilidades e as formas como decisões são tomadas por parte dos produtores, organizadores e consumidores.
+Entre os objetivos específicos, pretendemos identificar os atores desta cadeia, seus papéis e responsabilidades e verificar as formas como decisões são tomadas por parte dos produtores, organizadores e consumidores.
 
-Discutiremos opções de intrumentação desta rede com sensores para coleta de dados precisos de localização, tempo e características que afetam a qualidade dos produtos (temperatura, umidade) e como estes dados se relacionam com sistemas de rastreamento em uso, em formato de códigos de barras e QR (Quick Response), de acordo com padrões ISO/International Electro-technical Commission (IEC) 15961, 15962, 24791, 15459, 15418 e 15434.
+Em um segundo momento, relacionaremos em cada elo desta cadeia   opções de intrumentação com sensores para coleta de dados de localização, tempo e características que afetam a qualidade dos produtos (temperatura, umidade). Identificaremos então como estes dados se relacionam com sistemas de rastreamento em uso - códigos de barras e QR (Quick Response), de acordo com padrões ISO/International Electro-technical Commission (IEC) 15961, 15962, 24791, 15459, 15418 e 15434.
 
-Relacionaremos a aplicação destes sensores com o atendimento do padrão ISO para cadeias de suprimentos de alimentos, o ISO 22005:2007 \citeonline{international2007traceability}.
+Por fim, também mostraremos como a aplicação destes sensores pode ser utilizada para o atendimento do padrão ISO para cadeias de suprimentos de alimentos, o ISO 22005:2007 \citeonline{international2007traceability}.
 
 
 \chapter{Plano de trabalho}
@@ -139,11 +145,13 @@ Este projeto tem duração prevista de 20 meses, divididos em 5 quadrimestres, d
 Dentro deste prazo, realizaremos as seguintes atividades:
 
 \begin{enumerate}
-\item Comparativo de modelos de cadeia logística para produtos agrícolas in natura;
+\item Comparativo de modelos de cadeia logística para produtos agrícolas \textit{in natura};
 
 \item Listagem de componentes de IoT aplicáveis a esta cadeia logística: classes e modelos de equipamentos,  protocolos de comunicação e análise de viabilidade para aplicação no estudo;
 
-\item Qualificação do plano de trabalho;
+\item Qualificação do plano de pesquisa;
+
+\item Elaboração de questionários e planos de visitas a campo;
 
 \item Contato com cadeia logística para coleta de dados: 
 \begin{enumerate}
@@ -152,8 +160,6 @@ Dentro deste prazo, realizaremos as seguintes atividades:
 	\item Visitas a coletivos de consumo: coleta de dados sobre recebimento, armazenamento temporário e entrega final;
 	\item Entrevistas ou questionários com consumidores finais.
 \end{enumerate}
-
-\item Elaboração de questionários e planos de visitas a campo;
 
 \item Análise dos dados coletados;
 
@@ -196,24 +202,25 @@ A tabela \ref{tabela:1} estrutura as atividades como linhas e os quadrimestres c
 
 \chapter{Material e métodos}
 
-Coletaremos dados da cadeia logística: de produtores rurais, organizadores, pontos de coleta e consumidores. A cadeia logística colaborativa a ser analisada será a Banca Orgânica, do Instituto Auá. A Banca Orgânica une coletivos de consumo com produtores de produtos agrícolas orgânicos e agroecológicos.
+Para realizar o mapeamento da cadeia proposto, coletaremos dados de produtores rurais, organizadores, pontos de coleta e consumidores. A cadeia logística a ser analisada será a Banca Orgânica, do Instituto Auá. Esta cadeia une coletivos de consumo auto-organizados com produtores de produtos agrícolas orgânicos e agroecológicos.
 
-Esta rede é formada por coletivos de consumo se auto-organizam ao redor de pontos de coleta. Existe um orgão centralizador dos pedidos, que faz a conexão entre produtores e centros de coleta destes coletivos.
+Além de características físicas como capacidade produtiva e  localização dos produtores, centros de coleta e consumidores, aplicaremos questionários aos envolvidos em cada um destes pontos da cadeia.
 
-Assumindo o acesso irrestrito à rede, aplicaremos questionários a consumidores finais, e documentaremos a produção, organização e distribuição através de visitas técnicas a cada ponto da cadeia de distribuição. Estas visitas seguirão um roteiro a ser elaborado previamente. No caso de falta de dados em uma visita devido a falhas no roteiro, este poderá ser reformulado e faremos novas visitas utilizando o roteiro corrigido.
+Documentaremos a produção, organização e distribuição através de visitas a cada ponto da cadeia de distribuição. Estas visitas seguirão um roteiro a ser elaborado previamente. No caso de falta de dados em uma visita devido a falhas no roteiro, este será reformulado e faremos novas visitas utilizando o roteiro corrigido.
 
-Na impossibilidade de acesso a esta rede, existem outras cadeias que podem ser estudadas. \citeonline{Terrazzan2009} fez estudo similar utilizando redes de supermercados. Sem acesso poderemos coletar alguns pontos de dados relevantes utilizando dados de divulgação que coletaremos na imprensa.
+Na impossibilidade de acesso a esta rede, existem outras cadeias que podem ser estudadas. Por exemplo, a dissertação de \citeonline{Terrazzan2009} utilizou como fonte redes de supermercados na cidade de São Paulo. Sem acesso poderemos coletar dados públicos sobre o mercado de orgânicos.
+
+Coletaremos dados analíticos da cadeia logística através de sensores que serão selecionados no decorrer do projeto. Os dados coletados por estes sensores, que serão instalados nos veículos e caixas de entrega, fará parte de um banco de dados que será utilizado para as análises.
 
 \chapter{Forma de análise dos resultados}
 
 Agruparemos os resultados da coleta de dados em dimensões de demografia, localização, características de produção, distribuição e consumo.
 
-Faremos comparações de dados de produtores e consumidores para identificação de incompatibilidades entre oferta e demanda.
+Faremos comparações de dados de produtores e consumidores para identificação de eventuais assimetrias entre oferta e demanda de determinados produtos. Também procuraremos estudar a relação entre localização de produtores e centros de coleta, e entre centros de coleta e consumidores.
 
 Indicaremos oportunidades de otimização da cadeia logística, visando reduzir custos e tornar os produtos e meio de entrega mais atrativos para atender a futuras demandas: minimizar o tempo entre colheita e consumo, eliminar intervenções e processos manuais para integração da cadeia logística entre produtor e consumidor.
 
 Do ponto de vista de melhoria do nível de serviço, buscaremos indicar formas de ajustar roteiros e entregas que atendam as necessidades dos consumidores.
-
 
 % ----------------------------------------------------------
 % Referências bibliográficas
